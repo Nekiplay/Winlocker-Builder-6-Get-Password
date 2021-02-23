@@ -25,7 +25,7 @@ namespace AntiVirus
 
             if (openFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
-            string filename = openFileDialog.FileName;
+            string filename = openFileDialog.FileName; /1/
             Task.Factory.StartNew(() =>
             {
                 byte[] hsh = Scanner.GetFileBytes(filename);
